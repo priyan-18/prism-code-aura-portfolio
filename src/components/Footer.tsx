@@ -24,8 +24,7 @@ export const Footer = () => {
               P<span className="text-secondary">S</span>
             </div>
             <p className="text-foreground/60 text-sm flex items-center gap-2">
-              Crafted with <Heart className="w-4 h-4 text-red-500 animate-pulse" /> & <Code className="w-4 h-4 text-primary" />
-              <span className="ml-1">by Priyadharshan S</span>
+              Crafted with <Heart className="w-4 h-4 text-red-500 animate-pulse" /> by Priyadharshan S
             </p>
             <p className="text-foreground/40 text-xs mt-1">
               © 2024 All rights reserved
@@ -40,7 +39,7 @@ export const Footer = () => {
             transition={{ delay: 0.1 }}
             className="flex gap-8 text-sm"
           >
-            {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+            {['Home', 'About', 'Projects', 'Skills', 'Experience', 'Contact'].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}

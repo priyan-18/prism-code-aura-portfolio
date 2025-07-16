@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 export const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "Frontend Developer & Cybersecurity Enthusiast";
+  const fullText = "Web Developer with a passion for Cybersecurity & UI Excellence";
   
   useEffect(() => {
     let index = 0;
@@ -107,8 +107,7 @@ export const HeroSection = () => {
           variants={itemVariants}
           className="text-lg md:text-xl text-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Crafting immersive digital experiences with cutting-edge technology,
-          while securing the digital frontier through cybersecurity expertise.
+          Crafting immersive digital experiences with cutting-edge technology, while securing the digital frontier through cybersecurity expertise.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -116,7 +115,9 @@ export const HeroSection = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
         >
-          <motion.button
+          <motion.a
+            href="/Priyadharshan_resume.pdf"
+            download="Priyadharshan_resume.pdf"
             className="neon-button group flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -128,9 +129,10 @@ export const HeroSection = () => {
               initial={false}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.a>
 
           <motion.button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-6 py-3 bg-transparent border-2 border-secondary text-secondary font-medium rounded-lg transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground group flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -147,8 +149,8 @@ export const HeroSection = () => {
           className="flex justify-center gap-6"
         >
           {[
-            { icon: Github, href: '#', label: 'GitHub' },
-            { icon: Linkedin, href: '#', label: 'LinkedIn' },
+            { icon: Github, href: 'https://github.com/priyan-18', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/priyadharshan-s-271820269', label: 'LinkedIn' },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}

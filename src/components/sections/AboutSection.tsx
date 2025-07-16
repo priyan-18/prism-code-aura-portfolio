@@ -5,18 +5,33 @@ export const AboutSection = () => {
   const skills = [
     {
       icon: Code,
-      title: 'Frontend Development',
-      description: 'Creating responsive, interactive web applications with modern frameworks',
+      title: 'Web Development',
+      description: 'Building modern, responsive web applications with cutting-edge technologies',
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Protecting digital assets and implementing security best practices',
+      description: 'Implementing security best practices and protecting digital infrastructure',
     },
     {
       icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Building fast, efficient applications with cutting-edge techniques',
+      title: 'Problem Solving',
+      description: 'Creative solutions for complex technical challenges',
+    },
+    {
+      icon: Code,
+      title: 'UI/UX Awareness',
+      description: 'Designing intuitive and engaging user experiences',
+    },
+    {
+      icon: Shield,
+      title: 'Performance & Security',
+      description: 'Optimizing applications for speed and robust security',
+    },
+    {
+      icon: Zap,
+      title: 'Application Development',
+      description: 'End-to-end development of scalable applications',
     },
   ];
 
@@ -82,15 +97,11 @@ export const AboutSection = () => {
             </h3>
             
             <p className="text-lg text-foreground/80 leading-relaxed">
-              I'm a frontend developer with a passion for creating immersive digital experiences 
-              and a cybersecurity enthusiast dedicated to building secure, performant applications. 
-              My journey in tech combines creative problem-solving with rigorous security practices.
+              I'm a web developer with a passion for building immersive digital experiences and a strong enthusiasm for cybersecurity. I combine creative problem-solving with secure development practices to craft applications that are visually engaging, user-friendly, and resilient.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed">
-              With expertise in modern web technologies and a deep understanding of cybersecurity 
-              principles, I craft applications that are not only visually stunning but also robust 
-              and secure.
+              With expertise in modern web technologies and a deep understanding of security principles, I ensure every project is both innovative and robust.
             </p>
 
             {/* Skills Grid */}

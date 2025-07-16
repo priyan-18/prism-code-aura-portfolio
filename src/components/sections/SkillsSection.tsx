@@ -5,34 +5,35 @@ const skillCategories = [
   {
     name: 'Frontend',
     skills: [
-      { name: 'React', level: 95, icon: '⚛️' },
-      { name: 'TypeScript', level: 90, icon: '📘' },
-      { name: 'Three.js', level: 85, icon: '🎮' },
-      { name: 'Next.js', level: 88, icon: '▲' },
-      { name: 'Tailwind CSS', level: 92, icon: '🎨' },
-      { name: 'Framer Motion', level: 87, icon: '🎭' },
+      { name: 'HTML5', level: 90, icon: '🌐' },
+      { name: 'CSS3', level: 75, icon: '🎨' },
+      { name: 'JavaScript', level: 90, icon: '⚡' },
+      { name: 'React.js', level: 90, icon: '⚛️' },
+      { name: 'Tailwind CSS', level: 75, icon: '💨' },
+      { name: 'Framer Motion', level: 75, icon: '🎭' },
+      { name: 'Three.js', level: 70, icon: '🎮' },
     ],
   },
   {
-    name: 'Cybersecurity',
+    name: 'Backend & Database',
     skills: [
-      { name: 'Penetration Testing', level: 80, icon: '🛡️' },
+      { name: 'Node.js', level: 90, icon: '🟢' },
+      { name: 'Express.js', level: 75, icon: '🚂' },
+      { name: 'MongoDB', level: 75, icon: '🍃' },
+      { name: 'Python', level: 90, icon: '🐍' },
+      { name: 'SQL', level: 75, icon: '🗄️' },
+      { name: 'API Integration', level: 75, icon: '🔗' },
+    ],
+  },
+  {
+    name: 'Security & Others',
+    skills: [
+      { name: 'Cybersecurity', level: 80, icon: '🛡️' },
+      { name: 'Git & GitHub', level: 85, icon: '🐙' },
+      { name: 'Linux', level: 80, icon: '🐧' },
       { name: 'Network Security', level: 75, icon: '🔒' },
-      { name: 'Cryptography', level: 70, icon: '🔐' },
-      { name: 'Vulnerability Assessment', level: 82, icon: '🔍' },
-      { name: 'Security Compliance', level: 78, icon: '✅' },
-      { name: 'Incident Response', level: 73, icon: '🚨' },
-    ],
-  },
-  {
-    name: 'Tools & Technologies',
-    skills: [
-      { name: 'Git & GitHub', level: 93, icon: '🐙' },
-      { name: 'Docker', level: 78, icon: '🐳' },
-      { name: 'AWS', level: 72, icon: '☁️' },
-      { name: 'Linux', level: 85, icon: '🐧' },
-      { name: 'Figma', level: 88, icon: '🎨' },
-      { name: 'VS Code', level: 95, icon: '💻' },
+      { name: 'Penetration Testing', level: 70, icon: '🔍' },
+      { name: 'VS Code', level: 90, icon: '💻' },
     ],
   },
 ];
@@ -182,9 +183,10 @@ export const SkillsSection = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: 'AWS Cloud Practitioner', org: 'Amazon', status: 'In Progress' },
-              { name: 'CompTIA Security+', org: 'CompTIA', status: 'Planned' },
-              { name: 'React Developer', org: 'Meta', status: 'Completed' },
+              { name: 'Certified JavaScript Developer', org: 'Udemy', status: 'Completed' },
+              { name: 'Cybersecurity', org: 'Great Learning', status: 'Completed' },
+              { name: 'MongoDB, Node.js Internship', org: 'GeeksForGeeks', status: 'Completed' },
+              { name: 'NASA Space App Challenge', org: 'NASA', status: 'Participant (2024)' },
             ].map((cert, index) => (
               <motion.div
                 key={cert.name}

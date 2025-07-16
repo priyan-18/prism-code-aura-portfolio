@@ -27,27 +27,26 @@ export const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'priyadharshan@example.com',
-      href: 'mailto:priyadharshan@example.com',
+      value: 'priyadharshandharshan9@gmail.com',
+      href: 'mailto:priyadharshandharshan9@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
+      value: '+91 70103 41703',
+      href: 'tel:+917010341703',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Chennai, Tamil Nadu, India',
+      value: 'Puducherry, India',
       href: '#',
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub', color: 'text-white' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'text-blue-400' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'text-sky-400' },
+    { icon: Github, href: 'https://github.com/priyan-18', label: 'GitHub', color: 'text-white' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/priyadharshan-s-271820269', label: 'LinkedIn', color: 'text-blue-400' },
   ];
 
   return (

@@ -1,5 +1,4 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Suspense } from 'react';
 import { FloatingPlanet } from './FloatingPlanet';
 import { StarField } from './StarField';
@@ -26,22 +25,14 @@ export const Scene3D = ({
       <Suspense fallback={<LoadingFallback />}>
         <Canvas
           className="w-full h-full"
-          gl={{ 
-            antialias: true, 
-            alpha: true,
-            powerPreference: "high-performance"
-          }}
-          dpr={[1, 2]}
-          onError={(error) => {
-            console.warn('Canvas error:', error);
-          }}
+          camera={{ position: cameraPosition, fov: 60 }}
+          gl={{ antialias: false, alpha: true }}
+          dpr={1}
         >
-          <PerspectiveCamera makeDefault position={cameraPosition} fov={60} />
-          
-          {/* Lighting */}
-          <ambientLight intensity={0.2} color="#C400FF" />
+          {/* Simple Lighting */}
+          <ambientLight intensity={0.3} color="#C400FF" />
           <directionalLight 
-            position={[10, 10, 5]} 
+            position={[5, 5, 5]} 
             intensity={0.5} 
             color="#2A00A2" 
           />
@@ -55,16 +46,6 @@ export const Scene3D = ({
           <Suspense fallback={null}>
             {children || <FloatingPlanet />}
           </Suspense>
-          
-          {/* Controls */}
-          {enableControls && (
-            <OrbitControls 
-              enableZoom={false}
-              enablePan={false}
-              autoRotate
-              autoRotateSpeed={0.5}
-            />
-          )}
         </Canvas>
       </Suspense>
     </div>

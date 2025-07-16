@@ -8,14 +8,18 @@ export const FloatingPlanet = () => {
   const ringsRef = useRef<THREE.Group>(null);
 
   useFrame((state) => {
-    if (planetRef.current) {
-      planetRef.current.rotation.y += 0.01;
-      planetRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.1;
-    }
-    
-    if (ringsRef.current) {
-      ringsRef.current.rotation.z += 0.005;
-      ringsRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.05;
+    try {
+      if (planetRef.current) {
+        planetRef.current.rotation.y += 0.01;
+        planetRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.1;
+      }
+      
+      if (ringsRef.current) {
+        ringsRef.current.rotation.z += 0.005;
+        ringsRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.05;
+      }
+    } catch (error) {
+      console.warn('FloatingPlanet animation error:', error);
     }
   });
 
@@ -23,7 +27,7 @@ export const FloatingPlanet = () => {
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.8}>
       <group>
         {/* Main Planet */}
-        <Sphere ref={planetRef} args={[1.5, 64, 64]} position={[0, 0, 0]}>
+        <Sphere ref={planetRef} args={[1.5, 32, 32]} position={[0, 0, 0]}>
           <meshStandardMaterial
             color="#1a1a2e"
             metalness={0.7}
@@ -35,7 +39,7 @@ export const FloatingPlanet = () => {
 
         {/* Glowing Rings */}
         <group ref={ringsRef}>
-          <Ring args={[2.2, 2.5, 64]} rotation={[Math.PI / 2, 0, 0]}>
+          <Ring args={[2.2, 2.5, 32]} rotation={[Math.PI / 2, 0, 0]}>
             <meshBasicMaterial
               color="#C400FF"
               transparent
@@ -44,7 +48,7 @@ export const FloatingPlanet = () => {
             />
           </Ring>
           
-          <Ring args={[2.8, 3.0, 64]} rotation={[Math.PI / 2, 0, 0]}>
+          <Ring args={[2.8, 3.0, 32]} rotation={[Math.PI / 2, 0, 0]}>
             <meshBasicMaterial
               color="#2A00A2"
               transparent

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Scene3D } from '../3D/Scene3D';
+import { ErrorBoundary } from '../ErrorBoundary';
 import { useEffect, useState } from 'react';
 
 export const HeroSection = () => {
@@ -47,7 +48,9 @@ export const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Scene3D />
+        <ErrorBoundary>
+          <Scene3D />
+        </ErrorBoundary>
       </div>
       
       {/* Gradient Overlay */}

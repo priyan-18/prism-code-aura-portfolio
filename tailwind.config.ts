@@ -63,6 +63,23 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'grotesk': ['Space Grotesk', 'sans-serif'],
+				'orbitron': ['Orbitron', 'monospace'],
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+				'cyber-grid': 'linear-gradient(rgba(42, 0, 162, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(42, 0, 162, 0.1) 1px, transparent 1px)',
+			},
+			backdropBlur: {
+				xs: '2px',
+			},
+			boxShadow: {
+				'neon': '0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3)',
+				'neon-secondary': '0 0 20px hsl(var(--secondary) / 0.5), 0 0 40px hsl(var(--secondary) / 0.3)',
+				'glow': '0 0 10px hsl(var(--primary) / 0.3)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
